@@ -1,0 +1,696 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={CIN : Cinématique du solide},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+
+\usepackage{multicol}
+\fichetrue
+%\fichefalse
+
+%\proftrue
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PTSI}
+\def\xxnumpartie{Cycle 4}
+\def\xxpartie{Étude cinématique des systèmes de solides de la chaîne d'énergie  \\
+Analyser, Modéliser, Résoudre}
+
+\def\xxnumchapitre{Chapitre -- }
+\def\xxchapitre{Étude des chaînes fermées : Détermination des lois Entrée -- Sortie}
+
+\def\xxtitreexo{Exercices d'applications}
+\def\xxsourceexo{\hspace{.2cm} Ressources de JP Pupier, F. Mathurin et S. Genouël.}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+\def\xxonglet{Cy. 4 -- Ch. }
+
+\def\xxactivite{Applications}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\noindent \textbf{Résoudre :} à partir des modèles retenus :
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item choisir une méthode de résolution analytique, graphique, numérique;
+\item mettre en \oe{}uvre une méthode de résolution.
+\end{itemize}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma bloc.
+}}
+
+\def\xxfigures{
+%\includegraphics[width=.8\textwidth]{images/prot_01}
+}%figues de la page de garde
+
+\def\xxpied{%
+Cycle 4 --  \\
+Ch.  : -- \xxactivite%
+}
+
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{images/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{7.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+\begin{multicols}{2}
+\subsection*{Exercice 1 -- Poussoir et roulette}
+ 
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/fig1_1b} 
+\end{center}
+Fonctionnement : La rotation de 1 (entrée) fait mouvoir 3 (sortie).
+
+\subparagraph{}
+\textit{Définir les différents repères liés aux solides. Dessiner les axes sur le schéma.}
+
+\ifprof
+\begin{corrige}
+\begin{center}
+\includegraphics[width=.6\textwidth]{images/fig1_1c} 
+\end{center}
+On a les repères suivants :
+\begin{itemize}
+\item $\mathcal{R}_0=\left(B,\vect{x_0},\vect{y_0},\vect{z_0} \right)$ lié à 0;
+\item $\mathcal{R}_1=\left(B,\vect{x_1},\vect{y_1},\vect{z_0} \right)$ lié à 1;
+\item $\mathcal{R}_2=\left(A,\vect{x_2},\vect{y_2},\vect{z_0}\right)$ lié à 2;
+\item $\mathcal{R}_3=\left(E,\vect{x_0},\vect{y_0},\vect{z_0} \right)$ lié à 3.
+\end{itemize}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Réaliser le paramétrage géométrique de ce mécanisme (tous les paramètres). Préciser si les paramètres sont variables ou constants. Indiquez les paramètres sur le schéma.}
+
+\ifprof
+\begin{corrige}
+Il est possible de définir les paramètres géométriques constants suivants : 
+\begin{itemize}
+\item $\vect{BA} = R\vect{x_1}$;
+\item $\vect{AC} = r\vect{x_2}$ et $\vect{DA} = r\vect{y_0}$;
+\item $\vect{BF} = a\vect{x_0}-b\vect{y_0}$.
+\end{itemize}
+
+Les paramètres angulaires permettant le changements de repères sont donnés par les figures suivantes: 
+\begin{center}
+\includegraphics[width=.6\textwidth]{images/fig1_2c} 
+\end{center}
+
+On peut par ailleurs définir $\lambda$ tel que $\vect{FE} = \lambda \vect{y_0}$ ou encore $\mu_1(t)$ et $\mu_2(t)$ tels que $\vect{BD} = \mu_1(t) \vect{x_0}+\mu_2(t) \vect{y_0}$
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Trouver la loi entrée sortie.}
+
+\ifprof
+\begin{corrige}
+On peut par exemple écrire la fermeture de chaîne vectorielle suivante :
+$$
+\vect{BA}+\vect{AD}+\vect{DB}=\vect{0} 
+$$
+
+En projetant cette loi sur $\vect{y_0}$ on obtient : 
+$$
+\vect{BA}\cdot\vect{y_0}+\vect{AD}\cdot\vect{y_0}+\vect{DB}\cdot\vect{y_0}=0
+\Longleftrightarrow
+R\vect{x_1}\cdot\vect{y_0} - r\vect{y_0}\cdot\vect{y_0}- \mu_1(t) \vect{x_0}\cdot\vect{y_0}-\mu_2(t) \vect{y_0}\cdot\vect{y_0} = 0
+$$
+$$
+\Longleftrightarrow
+R\cos\left( \dfrac{\pi}{2}-\alpha(t)\right) - r-\mu_2(t)=0
+$$
+On a donc $R\sin\alpha(t) - r-\mu_2(t)=0$ soit :
+$$\mu_2(t)=R\sin\alpha(t) - r$$
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Calculer l'expression de la vitesse de 3 dans 0 en fonction de la vitesse angulaire de 1 dans 0 et de certains paramètres constants.}
+
+\ifprof
+\begin{corrige}
+En dérivant l'expression précédente, on a donc 
+$$\dot{\mu_2(t)}{dt}=\dot{\alpha(t)}R\cos\alpha(t) $$
+\end{corrige}
+\else \fi
+
+
+\subsection*{Exercice 2 -- Mécanisme pour mouvement alternatif}
+\setcounter{exo}{0}
+ Le mécanisme est cinématiquement plan. La rotation de l'arbre d'entrée 1 permet d'imprimer un mouvement de translation alternatif à l'arbre de sortie 4.
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/fig2_1} 
+\end{center}
+
+
+
+\begin{rem}
+Soignez l'écriture (les indices doivent être parfaitement lisibles).
+\end{rem}
+
+\subparagraph{}
+\textit{Définir les différents repères liés aux sous-ensembles cinématiques. Indiquer les autres origines possibles pour chaque repère.}
+
+
+\ifprof
+\begin{corrige}
+On a les repères suivants :
+\begin{itemize}
+\item $\mathcal{R}_0=\left(A,\vect{x_0},\vect{y_0},\vect{z_0} \right)$ lié à 0;
+\item $\mathcal{R}_1=\left(A,\vect{x_1},\vect{y_1},\vect{z_0} \right)$ lié à 1 (autre origine possible : $B$);
+\item $\mathcal{R}_2=\left(C,\vect{x_2},\vect{y_2},\vect{z_0}\right)$ lié à 2;
+\item $\mathcal{R}_3=\left(E,\vect{x_2},\vect{y_2},\vect{z_0}\right)$ lié à 3 (autre origine possible : $D$);
+\item $\mathcal{R}_4=\left(E,\vect{x_0},\vect{y_0},\vect{z_0} \right)$ lié à 4.
+\end{itemize}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Compléter le schéma ci-dessus en indiquant les divers axes utiles des repères.}
+
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Effectuer le paramétrage de ce mécanisme (les paramètres intermédiaires non utiles pour trouver la loi entrée-sortie ne doivent pas apparaître). On donne : $AB = r$ , $AC = a$, $\vect{CF}\cdot\vect{x_0}=b$. La position du point D sur CE n'a aucune importance ; il ne faut pas la faire intervenir dans les calculs. Il en est de même de l'altitude du point $F$.}
+
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Indiquer les paramètres variables et les paramètres constants sur le schéma.}
+
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Trouver la loi entrée-sortie. }
+
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Trouver l'expression de la valeur du paramètre d'entrée pour laquelle le point $E$ est au maximum en bas en utilisant une méthode mathématique puis en utilisant une méthode géométrique (plus intuitive). Faites un dessin pour la deuxième réponse.}
+
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\newpage
+
+\subsection*{Exercice 3 -- Joint de Cardan}
+\setcounter{exo}{0}
+
+
+Un joint de Cardan est un accouplement qui permet de transmettre un mouvement de rotation entre deux arbres concourants mais non alignés. L'angle maximum pratiquement utilisé entre les arbres est de $45\textdegree$. Une application courante est la transmission entre boite de vitesses  et roues-avant d’une voiture. 
+
+Les vues ci-dessous donnent des images d’un joint de cardan.
+
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[width=.3\linewidth]{images/fig3_1} & 
+\includegraphics[width=.3\linewidth]{images/fig3_2} & 
+\includegraphics[width=.3\linewidth]{images/fig3_3} 
+\end{tabular}
+\end{center}
+
+La modélisation suivante est proposée.
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/fig3_4} 
+\end{center}
+
+On appelle : 
+\begin{itemize}
+\item $\mathcal{R}$ le repère lié au solide $R$ considéré comme fixe. $\mathcal{R}=\left(O,\vect{x},\vect{y},\vect{z} \right)$;
+\item $\mathcal{R}'$ le repère lié au solide R considéré comme fixe. $\mathcal{R}'=\left(O,\vect{u},\vect{v},\vect{z} \right)$. On pose $\alpha = \left(\vect{y},\vect{v} \right)$ (constant);
+\item $\alpha$ l'"angle de brisure";
+\item $\mathcal{R}_1$ le repère lié au solide 1. $\mathcal{R}_1 = \left(O,\vect{x_1},\vect{y},\vect{z_1} \right)$. On pose  $\theta_1 = \left(\vect{x},\vect{x_1} \right)$;
+\item $\mathcal{R}_3$ le repère lié au solide 3. $\mathcal{R}_3 = \left(O,\vect{x_3},\vect{v},\vect{z_3} \right)$. On pose $\theta_3 = \left(\vect{u},\vect{x_3} \right)$.
+\end{itemize}
+
+\subparagraph{}
+\textit{Tracer en vue orthogonale, les trois dessins (figures de changement de base) permettant le passage de $\mathcal{R}$ à $\mathcal{R}_1$ , de $\mathcal{R}$ à $\mathcal{R}'$ et de $\mathcal{R}'$ à $\mathcal{R}_3$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Exprimer la condition géométrique sur 2 permettant de lier $\mathcal{R}_1$ à $\mathcal{R}_3$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Développer cette relation et trouver la loi entrée sortie : $\theta_3 = f(\theta_1 , \alpha)$. Tracer, pour $\alpha=45\textdegree$, la courbe représentant l’évolution de la sortie $\theta_3$ en fonction de l’entrée $\theta_1$ avec $\theta_1$ variant de $-\pi$ à $+\pi$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Dériver cette relation par rapport au temps pour trouver la vitesse de sortie $\dot{\theta_3}$ en fonction de la vitesse d’entrée $\dot{\theta_1}$, de $\theta_1$ et de $\alpha$.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Tracer l’évolution de la vitesse de sortie $\dot{\theta_3}$ en fonction notamment de l’évolution de l’angle d’entrée $\theta_1$. On prendra un angle de brisure de $45\textdegree$ et une vitesse d’entée constante $\dot{\theta_1}$ de 1 rad/s.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Conclure sur une des propriétés de ce mécanisme.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\newpage
+\subsection*{Exercice 4 -- Pompe hydraulique à pistons radiaux}
+ \setcounter{exo}{0}
+On s’intéresse au comportement cinématique du dispositif de transformation de mouvement par excentrique 
+qui permet de transformer le mouvement de rotation continu de l’arbre d’entrée, sur lequel est fixé 
+l’excentrique 1, en mouvement de translation alternative du piston 2. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig1} 
+\includegraphics[width=\linewidth]{images/fig2} 
+\end{center}
+
+
+
+
+\subparagraph{}
+\textit{Donner le graphe de liaison de ce système.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Donner les caractéristiques, le paramètre d’entrée et le paramètre de sortie du système. }
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{Déterminer la loi E/S en position du système à l’aide d’une fermeture géométrique. }
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+\subparagraph{}
+\textit{En déduire la vitesse du piston par rapport au cylindre (c'est-à-dire la loi E/S en vitesse). }
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\newpage
+
+\subsection*{Exercice 5 -- Système d'orientation d'antenne}
+\setcounter{exo}{0}
+
+
+%\begin{minipage}[c]{.65\linewidth}
+Le système d’orientation d’antenne ci-contre permet, grâce à une télécommande, de régler à distance l’orientation de sa parabole afin d’optimiser la réception des chaines de télévision. 
+ 
+Pour cela, le vérin électrique est alimenté en énergie électrique par le préactionneur, de façon à faire rentrer ou sortir la tige et obtenir ainsi la position de l’antenne désirée. 
+%\end{minipage} \hfill
+%\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/fig3} 
+\end{center}
+%\end{minipage} 
+
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{images/fig4} 
+\includegraphics[width=.45\linewidth]{images/fig5} 
+\end{center}
+
+\begin{obj}
+Déterminer la durée d’alimentation en énergie électrique du système d’orientation pour un 
+changement de position de l’antenne donné. 
+
+\end{obj}
+
+
+
+%\begin{minipage}[c]{.65\linewidth}
+Une représentation 2D du système d’orientation d’antenne est donnée ci-dessous :
+\begin{itemize}
+\item $\vect{AC}=L_0\vect{x_0}$;
+\item $\vect{AB}=L_1\vect{x_1}$;
+\item $\alpha_1(t)$ : paramètre de mouvement de l’antenne 1 par rapport au support 0; 
+\item $\alpha_2(t)$ : paramètre de mouvement du corps 2 par rapport au support 0;
+\item $d(t)$ : paramètre de mouvement de la tige 3 par rapport au corps 2. 
+\end{itemize}
+%\end{minipage} \hfill
+%\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/fig6} 
+\end{center}
+%\end{minipage} 
+
+
+\subparagraph{}
+\textit{Réaliser, en s’inspirant de la figure ci-dessus, le schéma cinématique du système d’orientation d’antenne dans le plan 
+$\left(O,\vect{x_0},\vect{y_0}\right)$. Paramétrer ce schéma cinématique. }
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Donner le graphe de liaison de ce système.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Donner les caractéristiques, le paramètre d’entrée et le paramètre de sortie du système.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Déterminer la loi E/S en position du système à l’aide d’une fermeture géométrique. }
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+%\vspace{.5cm}
+
+%\begin{minipage}[c]{.45\linewidth}
+Le vérin électrique utilisé est constitué : 
+\begin{itemize}
+\item d’un moteur électrique ;
+\item d’un réducteur à engrenage (rapport de réduction $k=1/5$);
+\item d’un dispositif de transformation de mouvement de type vis-
+écrou (pas $p=2$). 
+\end{itemize}
+%\end{minipage} \hfill
+%\begin{minipage}[c]{.5\linewidth}
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/fig7} 
+\end{center}
+%\end{minipage} 
+
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/fig8} 
+\end{center}
+
+On suppose que le moteur électrique tourne à la vitesse constante de $6000\; tr/min$. 
+
+
+\subparagraph{}
+\textit{Déterminer la vitesse de sortie de la tige par rapport au corps.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+
+On souhaite faire passer l’antenne 1 d’une position initiale ($\alpha_1 = 58\textdegree$) à une position finale ($\alpha_2 = 82\textdegree$).
+
+\subparagraph{}
+\textit{Déterminer, à l’aide de la courbe de la loi entrée-sortie donnée ci-dessous, la durée d’alimentation du vérin électrique permettant ce changement de position. }
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/fig9} 
+\end{center}
+
+\newpage
+\subsection*{Exercice 6 : Palettiseur pour l'industrie laitière}
+\setcounter{exo}{0}
+Les briques de lait de 1L sont stockées par groupe de 6, et déposée sur des palettes (ce qui facilite leur transport dans les camions). Dans une chaîne de conditionnement de briques de lait, on utilise souvent des poussoirs qui poussent tout un lot de 6 briques de lait. On se propose d'étudier un de ces poussoirs dont on donne le modèle ci-dessous ainsi qu’un extrait de cahier des charges fonctionnel. L'objectif d’étude est de vérifier si le système permet d'atteindre l’exigence demandée. 
+
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/Fig06_01}
+\end{center}
+
+Le bâti 0 est fixe. Un motoréducteur anime en rotation la manivelle 2.
+%Par l'intermédiaire d'une liaison en B, la manivelle 2 déplace la tige 3 en rotation autour de l’axe (A,  z) qui déplace elle même le poussoir 4 en translation suivant l'axe  y 0 . 
+
+
+\textbf{Données : } $\vect{OB}=R\vect{x_2}$, $\vect{HA}=L\vect{x_0}$ et $\vect{OA}=L_1\vect{x_0}$ avec $R=0,15 \;\text{m}$ et $L=2L_1=0,5\; \text{m}$.
+
+
+\subparagraph{}
+\textit{Paramétrer le mécanisme. Quelle est l'entrée ? la sortie ?}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Écrire les équations de fermeture géométrique $(OAB)$ en projection dans la base 0. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Écrire les équations de fermeture géométrique $(HAC)$ en projection dans la base 0. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Réécrire les équations de fermeture géométrique $(OAB)$ et $(HAC)$ en projection dans la base 0 et en déduire la loi entrée sortie du système. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Déterminer l'amplitude de déplacement du poussoir.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{Conclure vis-à-vis du cahier des charges.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subsection*{Exercice 7 : Benne de camion}
+\setcounter{exo}{0}
+
+%\begin{minipage}[c]{.48\linewidth}
+On s’intéresse à un camion en phase de déchargement dont on donne une description structurelle ainsi qu’un extrait de cahier des charges fonctionnel.  
+
+Le camion noté $S_0$ en déchargement soulève l'ensemble $S_1$ (benne + chargement) de centre de gravité $G$ et de masse $M = 7000\; kg$ constitué de la benne et de la matière transportée. Un vérin (corps de vérin $S_2$ et tige $S_3$ ) commande le mouvement. 
+
+L’objectif est de déterminer la vitesse de rotation de la benne 1 en fonction du débit dans le vérin afin de vérifier la performance en vitesse angulaire de cette benne. 
+
+%\end{minipage}
+%\hfill
+%\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/Fig07_01}
+
+\includegraphics[width=.9\linewidth]{images/Fig07_02}
+\end{center}
+%\end{minipage}
+
+\subparagraph{}
+\textit{Réaliser le schéma cinématique du système et paramétrer le mécanisme. Indiquer l'entrée et la sortie.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+On donne les caractéristiques du vérin : 
+\begin{itemize}
+\item débit volumique d'huile injectée dans le vérin $Q$ (en $m^3/s$);
+\item surface du piston du vérin $S$ (en $m^2$ );
+\item vitesse de déploiement du vérin $V$ (en $m/s$). 
+\end{itemize}
+
+\subparagraph{}
+\textit{Exprimer le débit $Q$ dans le vérin en fonction de sa vitesse de déploiement $V$ et de la surface du piston $S$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Écrire l'équation vectorielle de fermeture géométrique linéaire et projeter l’équation vectorielle obtenue dans la base 0. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{À partir des équations issues de la fermeture géométrique donner la loi entrée sortie. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{ Dériver l'expression obtenue question précédente et déterminer $Q$. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{ L'étude de l'application numérique de la formule précédente aboutit à $\dot{\theta}_{max} = 70 \; Q$. Le vérin délivrant 0,4 Litres/s, conclure quant à la capacité de la benne à satisfaire la performance en vitesse angulaire. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\newpage
+
+\subsection*{Exercice 8 : Mélangeur}
+\setcounter{exo}{0}
+\subsubsection*{Mécanisme réel}
+La pièce 2 tourne entraînant à la sortie un mouvement de rotation oscillant de 4.
+\begin{tabular}{cc}
+\textit{Mécanisme en situation} & \textit{Schématisation} \\
+\includegraphics[width=.4\linewidth]{images/Fig08_01} & 
+\includegraphics[width=.4\linewidth]{images/Fig08_02} \\
+\textit{Réalisation liaison} & \textit{Réalisation liaison} \\
+\textit{linéaire annulaire (1)} & \textit{linéaire annulaire (2)} \\
+\includegraphics[width=.4\linewidth]{images/Fig08_03} & 
+\includegraphics[width=.4\linewidth]{images/Fig08_04} \\
+\end{tabular}
+
+\subsubsection*{Modélisation -- Paramétrage -- Loi Entrée--Sortie}
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/Fig08_05}
+\end{center}
+On donne : 
+\begin{itemize}
+\item $\mathcal{R}$ le repère lié au solide 0 considéré comme fixe. $\mathcal{R} = \left( O\vect{x},\vect{y},\vect{z}\right)$;
+\item $\mathcal{R}_2$ le repère lié au solide 2. $\mathcal{R}_2 = \left( O\vect{x_2},\vect{y},\vect{z_2}\right)$. On pose $\left( \vect{x},\vect{x_2}\right) = \beta$;
+\item $\mathcal{R}_3$ le repère lié au solide 3. $\mathcal{R}_3 = \left( D\vect{x_2},\vect{y_3},\vect{z_3}\right)$. On pose $\left( \vect{z_2},\vect{z_3}\right) = \gamma$ (constant);
+\item $\mathcal{R}_4$ le repère lié au solide 4. $\mathcal{R}_4 = \left( D\vect{x_4},\vect{y_4},\vect{z}\right)$. On pose $\left( \vect{x},\vect{x_4}\right) = \theta$;
+\end{itemize}
+
+Le mécanisme est tel que : $\left( \vect{OC},\vect{OA}\right) = \left( \vect{DC},\vect{DE}\right) = \dfrac{\pi}{2}$ constamment (solides indéformables).
+
+\subparagraph{}
+\textit{Faire le graphe de structure du mécanisme.}
+
+
+\subparagraph{}
+\textit{Tracer les figures planes correspondant aux changements de repère}
+
+
+\subparagraph{}
+\textit{Écrire une relation géométrique traduisant la non déformation de 3 et qui permet d'établir une relation entre un axe de $\mathcal{R}_3$  à un axe de $\mathcal{R}_4$.}
+
+\subparagraph{}
+\textit{Développer cette relation et trouver la loi entrée sortie : $\theta = f(\beta , \gamma)$. Faire la vérification d'homogénéité. Vérifier le signe et une valeur particulière (rédiger ces vérifications).}
+
+\subparagraph{}
+\textit{Dériver cette relation par rapport au temps pour trouver la vitesse de sortie $\dot{\theta}$ en fonction de la vitesse d'entrée $\dot{beta}$,  $\beta$  et de $\gamma$.}
+
+\subparagraph{}
+\textit{Prendre  $\gamma = 60^o$ et tracer $\theta = f(\beta, \gamma)$ pour un tour complet de 2. Porter les valeurs numériques caractéristiques.}
+\end{multicols}
+\end{document}
+
+
