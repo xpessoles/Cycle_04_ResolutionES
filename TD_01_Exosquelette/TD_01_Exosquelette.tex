@@ -102,7 +102,7 @@ xx \xxactivite%
 %\else
 \begin{multicols}{2}
 %\fi
-\section*{Mise en situation}
+\section*{Mise en situation -- Assurer le mouvement vertical}
 \ifprof
 \else
 
@@ -121,7 +121,33 @@ d’une grande fluidité.
 %\textit{}
 \end{center}
 
-On donne dans la figure ci-dessous, la modélisation cinématique retenue dans le but de simuler le comportement de l'exosquelette.
+\begin{center}
+\includegraphics[width=\linewidth]{images/Exigences}
+%\textit{}
+\end{center}
+\fi
+
+%\subsection*{}
+
+\begin{obj}
+Proposer un modèle de connaissance des éléments réalisant l’exigence fonctionnelle <<~assurer le mouvement vertical~>> puis valider les performances attendues listées par le cahier des charges.
+\end{obj}
+
+
+
+\subsection*{Élaboration du modèle géométrique direct et du modèle articulaire inverse}
+\begin{obj}
+Élaborer la commande du moteur pilotant le genou à partir d’un mouvement défini dans l’espace
+opérationnel puis converti dans l’espace articulaire.
+\end{obj}
+
+
+\ifprof
+\else
+L’étude se limite au passage de la position accroupie à la position relevée de l’exosquelette. Lors de ce passage,
+le point $O_2$ est en mouvement de translation verticale suivant la direction $\axe{O_0}{\vect{z_0}}$ et sa vitesse de déplacement
+évolue selon une loi trapézoïdale. Un modèle plan de la chaîne cinématique ouverte représente la partie inférieure
+de l’exosquelette en position debout et fléchie.
 
 
 \begin{center}
@@ -129,30 +155,6 @@ On donne dans la figure ci-dessous, la modélisation cinématique retenue dans l
 %\textit{}
 \end{center}
 
-\begin{center}
-\includegraphics[width=\linewidth]{images/Exigences}
-%\textit{}
-\end{center}
-\fi
-
-\subsection*{Assurer le mouvement vertical}
-
-\begin{obj}
-Proposer un modèle de connaissance des éléments réalisant l’exigence fonctionnelle <<~assurer le mouvement vertical~>> puis valider les performances attendues listées par le cahier des charges (figure 4).
-\end{obj}
-
-
-\ifprof
-\else
-La demande de mouvement de l’utilisateur de l’exosquelette se traduit par une consigne de vitesse de type
-trapézoïdal pour le mouvement vertical. À l’aide du modèle articulaire inverse cette
-demande se traduit finalement en consigne de position des axes moteur genou gauche et droit. Cette consigne de position du moteur représentée à la figure suivante montre des parties qui peuvent être approchées par des constantes,
-des rampes et des paraboles.
-
-\begin{center}
-\includegraphics[width=\linewidth]{images/fig_06}
-%\textit{}
-\end{center}
 
 %Selon le cahier des charges, pour assurer une bonne synchronisation des axes, l’exigence de précision statique suite à une entrée de type échelon, de type rampe ou de type accélération doit être inférieure à 1\%.
 Le premier modèle défini figure suivante est adopté pour chaque axe.

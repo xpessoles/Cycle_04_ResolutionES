@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.9.4)  21 JUN 2018 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.9.4)  21 JUN 2018 16:58
 entering extended mode
 **./TD_01_Exosquelette.tex
 (TD_01_Exosquelette.tex
@@ -2598,137 +2598,132 @@ Overfull \hbox (0.31732pt too wide) in paragraph at lines 109--117
 [] 
  []
 
-<images/fig_03.png, id=8, 905.3825pt x 510.90875pt>
-File: images/fig_03.png Graphic file (type png)
-<use images/fig_03.png>
-Package pdftex.def Info: images/fig_03.png  used on input line 128. on input li
-ne 128.
-Package pdftex.def Info: Requested size: 236.84843pt x 133.6517pt on input line
- 128.
-<images/Exigences.png, id=9, 407.27408pt x 225.028pt>
+<images/Exigences.png, id=8, 392.28833pt x 203.27448pt>
 File: images/Exigences.png Graphic file (type png)
 <use images/Exigences.png>
-Package pdftex.def Info: images/Exigences.png  used on input line 133. on input
- line 133.
-Package pdftex.def Info: Requested size: 236.84843pt x 130.86313pt on input lin
-e 133.
+Package pdftex.def Info: images/Exigences.png  used on input line 125. on input
+ line 125.
+Package pdftex.def Info: Requested size: 236.84843pt x 122.72862pt on input lin
+e 125.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 140.
-<images/fig_06.png, id=11, 978.65625pt x 450.68375pt>
-File: images/fig_06.png Graphic file (type png)
-<use images/fig_06.png>
-Package pdftex.def Info: images/fig_06.png  used on input line 153. on input li
-ne 153.
-Package pdftex.def Info: Requested size: 236.84843pt x 109.06717pt on input lin
-e 153.
-<images/fig_05.png, id=12, 1087.06125pt x 211.79124pt>
+(mdframed)              on input line 132.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 139.
+<images/fig_03.png, id=10, 905.3825pt x 510.90875pt>
+File: images/fig_03.png Graphic file (type png)
+<use images/fig_03.png>
+Package pdftex.def Info: images/fig_03.png  used on input line 154. on input li
+ne 154.
+Package pdftex.def Info: Requested size: 236.84843pt x 133.6517pt on input line
+ 154.
+<images/fig_05.png, id=11, 1087.06125pt x 211.79124pt>
 File: images/fig_05.png Graphic file (type png)
 <use images/fig_05.png>
-Package pdftex.def Info: images/fig_05.png  used on input line 162. on input li
-ne 162.
+Package pdftex.def Info: images/fig_05.png  used on input line 164. on input li
+ne 164.
 Package pdftex.def Info: Requested size: 236.84843pt x 46.145pt on input line 1
-62.
+64.
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <10> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 166.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 168.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 9.19998pt on input line 166.
-LaTeX Font Info:    Try loading font information for TS1+mdput on input line 16
-8.
+(Font)              scaled to size 9.19998pt on input line 168.
+LaTeX Font Info:    Try loading font information for TS1+mdput on input line 17
+0.
 
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\MATHDESIGN\texmf\tex\latex\math
 design\mdput\ts1mdput.fd
 File: ts1mdput.fd 2006/01/29 Fontinst v1.928 font definitions for TS1/mdput.
 )
 LaTeX Font Info:    Font shape `TS1/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 168.
+(Font)              scaled to size 9.19998pt on input line 170.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `mdput' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 173.
+(Font)              scaled to size 6.43999pt on input line 175.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 173.
+(Font)              scaled to size 4.59999pt on input line 175.
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 177.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 177.
+(Font)              scaled to size 7.35999pt on input line 182.
  [1
 
 {C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/f
-ig_01.png (PNG copy)> <./images/fig_02.png (PNG copy)> <./images/fig_03.png (PN
-G copy)> <./images/Exigences.png> <./images/fig_06.png (PNG copy)> <./images/fi
-g_05.png>]
+ig_01.png (PNG copy)> <./images/fig_02.png (PNG copy)> <./images/Exigences.png>
+ <./images/fig_03.png (PNG copy)> <./images/fig_05.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 199.
+(mdframed)              on input line 201.
 
 
 Package hyperref Warning: bookmark level for unknown exo defaults to 0.
 
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 9.19998pt on input line 206.
-<images/fig_08.png, id=34, 864.22874pt x 187.70125pt>
+(Font)              scaled to size 9.19998pt on input line 208.
+<images/fig_08.png, id=36, 864.22874pt x 187.70125pt>
 File: images/fig_08.png Graphic file (type png)
 <use images/fig_08.png>
-Package pdftex.def Info: images/fig_08.png  used on input line 294. on input li
-ne 294.
+Package pdftex.def Info: images/fig_08.png  used on input line 296. on input li
+ne 296.
 Package pdftex.def Info: Requested size: 236.84843pt x 51.439pt on input line 2
-94.
+96.
 LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 8.37598pt on input line 378.
+(Font)              scaled to size 8.37598pt on input line 380.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 6.28198pt on input line 378.
+(Font)              scaled to size 6.28198pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 378.
+(Font)              scaled to size 7.35999pt on input line 380.
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 378.
+(Font)              scaled to size 5.51999pt on input line 380.
 
-Overfull \hbox (28.08401pt too wide) in paragraph at lines 378--394
+Overfull \hbox (28.08401pt too wide) in paragraph at lines 380--396
 [][] 
  []
 
-<images/fig_10.png, id=35, 1838.87pt x 595.22375pt>
+<images/fig_10.png, id=37, 1838.87pt x 595.22375pt>
 File: images/fig_10.png Graphic file (type png)
 <use images/fig_10.png>
-Package pdftex.def Info: images/fig_10.png  used on input line 403. on input li
-ne 403.
+Package pdftex.def Info: images/fig_10.png  used on input line 405. on input li
+ne 405.
 Package pdftex.def Info: Requested size: 483.69687pt x 156.56192pt on input lin
-e 403.
-<png/logo_lycee.png, id=36, 329.23pt x 265.99374pt>
+e 405.
+<png/logo_lycee.png, id=38, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
 <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 413. on input l
-ine 413.
+Package pdftex.def Info: png/logo_lycee.png  used on input line 415. on input l
+ine 415.
 Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 4
-13.
+15.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 413.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 415.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 45.97325pt.
@@ -2736,12 +2731,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./png/logo_lycee.png> <./images/fig_08.png> <./images/fig_10.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 413.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 413.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 415.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 415.
 
 (TD_01_Exosquelette.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 413.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 413.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 415.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 415.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2749,16 +2744,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package logreq Info: Writing requests to 'TD_01_Exosquelette.run.xml'.
 \openout1 = `TD_01_Exosquelette.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 413.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 415.
  ) 
 Here is how much of TeX's memory you used:
- 42656 strings out of 493352
- 806786 string characters out of 3139710
- 1381680 words of memory out of 3000000
- 45307 multiletter control sequences out of 15000+200000
- 737761 words of font info for 295 fonts, out of 3000000 for 9000
+ 42647 strings out of 493352
+ 806631 string characters out of 3139710
+ 1376680 words of memory out of 3000000
+ 45306 multiletter control sequences out of 15000+200000
+ 737217 words of font info for 289 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 57i,17n,77p,10433b,1912s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,21n,77p,10433b,1912s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc}<C:/Enseignement/Livre_Exo_Vuibert/In
 stallation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr7t.pfb><C:/Ensei
@@ -2774,9 +2769,9 @@ e/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri
 gram Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagdo8a.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/zapfding/uzdr.pfb>
-Output written on TD_01_Exosquelette.pdf (2 pages, 1209501 bytes).
+Output written on TD_01_Exosquelette.pdf (2 pages, 1155041 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 78978 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 27 named destinations out of 1000 (max. 500000)
+ 78973 words of extra memory for PDF output out of 89155 (max. 10000000)
 
