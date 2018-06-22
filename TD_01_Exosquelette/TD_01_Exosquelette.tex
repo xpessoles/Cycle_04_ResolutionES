@@ -106,6 +106,8 @@ xx \xxactivite%
 \ifprof
 \else
 
+\ifprof
+\else
 \noindent
 \begin{tabular}{m{.6\linewidth}m{.3\linewidth}}
 L’exosquelette est un appareil qui apporte à un être humain des capacités qu’il ne possède pas ou qu’il a perdues à cause d’un accident. Ce type d’appareil peut permettre à une personne de soulever des charges lourdes et diminuer considérablement les efforts à fournir sans la moindre fatigue. Après avoir revêtu un exosquelette adapté à sa morphologie et à sa taille, l’utilisateur peut faire ses mouvements en bénéficiant
@@ -118,17 +120,13 @@ d’une grande fluidité.
 
 
 \begin{center}
-%\textit{}
-\end{center}
-
-\begin{center}
 \includegraphics[width=\linewidth]{images/Exigences}
 %\textit{}
 \end{center}
 \fi
 
 %\subsection*{}
-
+\fi
 \begin{obj}
 Proposer un modèle de connaissance des éléments réalisant l’exigence fonctionnelle <<~assurer le mouvement vertical~>> puis valider les performances attendues listées par le cahier des charges.
 \end{obj}
@@ -141,7 +139,8 @@ Proposer un modèle de connaissance des éléments réalisant l’exigence fonct
 opérationnel puis converti dans l’espace articulaire.
 \end{obj}
 
-
+\ifprof
+\else
 L’étude se limite au passage de la position accroupie à la position relevée de l’exosquelette. Lors de ce passage,
 le point $O_2$ est en mouvement de translation verticale suivant la direction $\axe{O_0}{{z_0}}$ et sa vitesse de déplacement
 évolue selon une loi trapézoïdale. Un modèle plan de la chaîne cinématique ouverte représente la partie inférieure
@@ -180,6 +179,8 @@ On donne le paramétrage du modèle proposé.
 \item $\alpha=\text{constante}$;
 \item $L=\sqrt{\left(l_2+l_3\right)^2+l_4^2}$.
 \end{itemize}
+
+\fi
 
 \subparagraph{}\textit{Déterminer littéralement les coordonnées opérationnelles $l_4$ et $h(t)$ en fonction des coordonnées articulaires $\theta_{10}$, $\theta_{21}$ et des paramètres dimensionnels $L$ et $l_1$.}
 \ifprof
@@ -259,28 +260,31 @@ Pour exprimer  $\theta_{21}$ on réutilise le premier système d'équations :
 $
 \left\{
 \begin{array}{l}
-L\cos\theta_{10} = - l_1\cos\left(\theta_{10}+\theta_{21}\right)-l_4 \\
-L\sin\theta_{10} = - l_1\sin\left(\theta_{10}+\theta_{21}\right)+h(t) \\
+-l_4 =l_1\cos\left(\theta_{10}+\theta_{21}\right) + L\cos\theta_{10} \\
+h(t)  =l_1\sin\left(\theta_{10}+\theta_{21}\right) + L\sin\theta_{10}\\
 \end{array}
 \right.
 $
 
 On a alors 
-$L^2 = l_1^2+l_4^2 +2 l_1l_4\cos\left(\theta_{10}+\theta_{21}\right)+h(t)^2-2h(t)l_1\sin\left(\theta_{10}+\theta_{21}\right)$.
-
-
+$l_4 ^2 +h(t)^2= L^2 + l_1^2 + 2l_1L\left(\cos\theta_{10}\cos\left(\theta_{10}+\theta_{21}\right) +\sin\left(\theta_{10}+\theta_{21}\right) \sin\theta_{10}\right)$.
+En conséquences, 
+$\dfrac{l_4 ^2 +h(t)^2- L^2 - l_1^2}{2l_1L} = \cos\theta_{10}\cos\left(\theta_{10}+\theta_{21}\right) +\sin\left(\theta_{10}+\theta_{21}\right) \sin\theta_{10}$
+$= \cos\left(\theta_{10}+\theta_{21}-\theta_{10}\right) $.
+D'où $\theta_{21}=\arccos\left(\dfrac{l_4 ^2 +h(t)^2- L^2 - l_1^2}{2l_1L}  \right)$.
 \end{corrige}
 
 
 \else
 \fi
 
-
+\ifprof
+\else
 \begin{methode}
 Lorsqu'on a une équation de la forme $A\cos\theta_{10}+B\sin\theta_{10}=C$. On peut normer cette équation en la mettant sous la forme $\dfrac{A}{\sqrt{A^2+B^2}}\cos\theta_{10}+\dfrac{B}{\sqrt{A^2+B^2}}\sin\theta_{10}=\dfrac{C}{\sqrt{A^2+B^2}}$.
 On pose alors $\cos\varphi = \dfrac{A}{\sqrt{A^2+B^2}}$ et $\sin\varphi=\dfrac{B}{\sqrt{A^2+B^2}}$. On a alors $\cos\left( \theta_{10} - \varphi \right)=\dfrac{C}{\sqrt{A^2+B^2}}$.
 \end{methode}
-
+\fi
 
 \subsection*{Élaboration du modèle cinématique}
 \begin{obj}
@@ -291,32 +295,47 @@ En vue de dimensionner le moteur du genou, déterminer la vitesse articulaire en
 $\theta_{21}$ en fonction de $h(t)$, $\dot{h}(t)$, $l_1$, $L$ et $\sin\theta_{21}$.}
 \ifprof
 \begin{corrige}
+On a vu que $\cos\theta_{21}=\dfrac{l_4 ^2 +h(t)^2- L^2 - l_1^2}{2l_1L}  $.
+En dérivant, on a donc $- \dot{\theta}_{21} \sin\theta_{21}=\dfrac{2\dot{h}(t)h(t)}{2l_1L}$.
+Au final,  $\dot{\theta}_{21} =-\dfrac{\dot{h}(t)h(t)}{l_1L\sin\theta_{21}}$.
 \end{corrige}
 \else
 \fi
 
+\ifprof
+\else
 Un modèle multiphysique a permis de déterminer les conditions suivantes correspondant à la vitesse maximale : $t=\SI{1,5}{s}$, $h(t=1,5)=\SI{0,829}{m}$, $\dot{h}(t=1,5)=\SI{0,422}{m.s^{-1}}$ et $\theta_{21} = 55,9\degres$. Les longueurs $l_1$ et $L$ valent
 respectivement \SI{43,1}{cm} et \SI{51,8}{cm}. Le réducteur de vitesse utilisé a un rapport de réduction égal à $r=\dfrac{1}{120}$.
+\fi
 
 \subparagraph{}\textit{Déterminer la valeur maximale de la vitesse angulaire $\dot{\theta}_{21}$ et $\text{rad s}^{-1}$ puis celle de la fréquence de rotation d’un moteur de genou en $\text{tr min}^{-1}$.}
 \ifprof
 \begin{corrige}
+On a : $\dot{\theta}_{21} =-\dfrac{0,422 \times 0,829}{0,431\times 0,518\sin \left(55,9\right)}\simeq -\SI{1,89}{rad.s^{-1}}$. Soit une fréquence de rotation du moteur de \SI{2168}{tr.min^{-1}}.
 \end{corrige}
 \else
 \fi
 
 
+\ifprof
+\else
 
 \footnotesize
 \begin{tabular}{|p{.5\linewidth}|}
 \hline
 Éléments de corrigé :
 \begin{enumerate}
-\item ...
+\item $L\cos\theta_{10} +l_1\cos\left(\theta_{10}+\theta_{21}\right)+l_4={0}$ et 
+$L\sin\theta_{10}  +l_1\sin\left(\theta_{10}+\theta_{21}\right)-h(t) ={0}$.
+\item $\theta_{10} =\arccos \left( \dfrac{l_1^2 - L^2-l_4^2 -h(t)^2}{2L{\sqrt{l_4^2 + h(t)^2}}}\right) + \arctan\left(\dfrac{-h(t)}{l_4} \right)$ et $\theta_{21}=\arccos\left(\dfrac{l_4 ^2 +h(t)^2- L^2 - l_1^2}{2l_1L}  \right)$ et 
+\item $\dot{\theta}_{21} =-\dfrac{\dot{h}(t)h(t)}{l_1L\sin\theta_{21}}$.
+\item $\dot{\theta}_{21} \simeq -\SI{1,89}{rad.s^{-1}}$ $\dot{\theta}_m\simeq \SI{2168}{tr.min^{-1}}$.
 \end{enumerate} \\
 \hline
 \end{tabular}
 \normalsize
+\fi
+
 \ifprof
 \else
 \end{multicols}
